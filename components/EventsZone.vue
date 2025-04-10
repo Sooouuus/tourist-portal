@@ -7,7 +7,7 @@ const props = defineProps<{
     <div class="events-area">
         <h1>События</h1>
         <div class="events-inf-area">
-            <BlockZ class="date-choose-area">
+            <!-- <BlockZ class="date-choose-area">
                 <TextBaseText base-text="Месяц" class="month-choose-text"></TextBaseText>
                 <div style="height: 30px; background-color: aqua;">dates</div>
             </BlockZ>
@@ -16,7 +16,8 @@ const props = defineProps<{
                 <Ex name="09 фпреля"></Ex>
                 <Ex name="09 фпреля"></Ex>
                 <Ex name="09 фпреля"></Ex>
-            </div>
+            </div> -->
+            <CaledarFr></CaledarFr>
         </div>
     </div>
 </template>

@@ -13,6 +13,7 @@
     <EventsZone></EventsZone>
     <TravelGuide></TravelGuide>
   </div>
+  <!-- <TabAndcroll></TabAndcroll> -->
 </template>
 
 <style scoped>
@@ -30,7 +31,8 @@
 </style>
 <script lang="ts">
 import { EventsDatePicker } from '#components';
-import Calendar from './components/Calendar.vue';
+import TabAndcroll from './components/TabAndcroll.vue';
+
 
 
 

@@ -10,7 +10,8 @@ import NumberText from './Text/NumberText.vue';
                 <TextHeadingText headText="Отгадай Слово"></TextHeadingText>
                 <TextSmallText smallText="Угадывайте слова из лексикона Новгородцев, используя цветные подсказки, и получайте бонусы за каждую победу!"></TextSmallText>
             </div>
-            <RedButton buttonText="Перейти"></RedButton>
+            <ModalWindow></ModalWindow>
+            <!-- <RedButton buttonText="Перейти"></RedButton> -->
             <img src="../public/images/warm44.png" class="warm">
         </section>
         <section class="card-body2">

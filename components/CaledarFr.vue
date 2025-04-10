@@ -11,7 +11,7 @@ const months = [
 const currentDate = ref(new Date());
 const selectedDate = ref(null);
 const selectedMonth = ref(new Date().getMonth());
-const selectedYear = ref(new Date().getFullYear());
+
 
 const currentWeek = computed(() => {
   const startDate = new Date(currentDate.value);
@@ -46,18 +46,17 @@ const scrollWeek = (weeks) => {
 
 const updateControls = () => {
   selectedMonth.value = currentDate.value.getMonth();
-  selectedYear.value = currentDate.value.getFullYear();
+
 };
 
 const updateCalendar = () => {
   currentDate.value = new Date(
-    selectedYear.value,
     selectedMonth.value,
     currentDate.value.getDate()
   );
 };
 
-watch([selectedMonth, selectedYear], updateCalendar);
+watch([selectedMonth], updateCalendar);
 </script>
 
 <template>
@@ -69,13 +68,6 @@ watch([selectedMonth, selectedYear], updateCalendar);
             {{ month }}
           </option>
         </select>
-        <input 
-          type="number" 
-          v-model="selectedYear" 
-          @change="updateCalendar"
-          min="1900" 
-          max="525252"
-        >
       </div>
   
       <div class="week-header">
@@ -104,8 +96,8 @@ watch([selectedMonth, selectedYear], updateCalendar);
       </div>
 
       <div class="navigation">
-        <button @click="scrollWeek(-1)">← Предыдущая</button>
-        <button @click="scrollWeek(1)">Следующая →</button>
+        <button @click="scrollWeek(-1)">←</button>
+        <button @click="scrollWeek(1)">→</button>
       </div>
     </div>
   </template>
@@ -114,9 +106,11 @@ watch([selectedMonth, selectedYear], updateCalendar);
   
   <style scoped>
   .calendar-container {
-    max-width: 600px;
-    margin: 20px auto;
-    font-family: 'Arial', sans-serif;
+    width:100% ;
+    line-height: 0.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .controls {
@@ -156,8 +150,6 @@ watch([selectedMonth, selectedYear], updateCalendar);
     padding: 15px;
     text-align: center;
     border: 1px solid #eee;
-    cursor: pointer;
-    transition: all 0.2s;
   }
   
   .day-cell:hover {
@@ -176,10 +168,12 @@ watch([selectedMonth, selectedYear], updateCalendar);
   }
   
   .navigation {
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
+    flex-direction: row;
+
   }
   
   button {
@@ -196,13 +190,12 @@ watch([selectedMonth, selectedYear], updateCalendar);
     background: #FF3F3F;
   }
   .calendar-container {
-  max-width: 600px;
-  margin: 2rem auto;
+  width: 100%;
   padding: 1.5rem;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f2f2f2;
+  border-radius: 0px;
+
+  font-family: 'GroteskWideM';
 }
 
 .controls {
