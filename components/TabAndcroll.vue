@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { TabsContent, TabsIndicator, TabsList, TabsRoot, TabsTrigger, ScrollAreaScrollbar, ScrollAreaViewport, ScrollAreaRoot  } from 'reka-ui'
-const tags = Array.from({ length: 50 }).map((_, i, a) => `v1.2.0-beta.${a.length - i}`)
 </script>
 <template>
     <div class="container">
