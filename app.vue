@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="area">
+  <!-- <div class="area">
     <div class="head">
       <TheHeader></TheHeader>
     <ActiveZone></ActiveZone>
@@ -12,8 +12,8 @@
     <TurInf></TurInf>
     <EventsZone></EventsZone>
     <TravelGuide></TravelGuide>
-  </div>
-  <!-- <TabAndcroll></TabAndcroll> -->
+  </div> -->
+  <TabAndcroll></TabAndcroll>
 </template>
 
 <style scoped>
