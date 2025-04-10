@@ -12,6 +12,7 @@
     <TurInf></TurInf>
     <EventsZone></EventsZone>
     <TravelGuide></TravelGuide>
+    <div></div>
   </div>
 </template>
 

@@ -110,7 +110,7 @@ watch([selectedMonth, selectedYear], updateCalendar);
     </div>
   </template>
   
-
+<div></div>
   
   <style scoped>
   .calendar-container {
